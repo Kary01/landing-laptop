@@ -1,0 +1,63 @@
+:root{
+    /*fonts*/
+    --primary-font: 'Poppins', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--primary-font);
+}
+
+/*------------------------------------------------ header*/
+header{
+    display: flex;
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+
+header .logo__container{
+    flex: 1; /*toma todo el espacio disponible*/
+}
+
+header .logo__container .logo__title{
+    margin: 1em;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+header .nav__container{
+    flex: 2;
+}
+
+header .nav__container .nav--list{
+    justify-content: space-around;
+    list-style: none;
+}
+
+header .nav--list .nav--link{
+    color: #5f5f79;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+header .cart__container{
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.logo__container, .nav--list, .cart__container{
+    display: flex;
+}
+
+/*------------------------------------------------ main*/
