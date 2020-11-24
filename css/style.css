@@ -65,7 +65,7 @@ main .main__container{
     display: flex;
     width: 90%;
     margin: auto;
-    min-width: 80vh;
+    min-width: 50vh;
     align-items: center;
 }
 
@@ -121,11 +121,13 @@ main .main__cover{
 }
 
 main .main__cover img{
-    height: 60vh;
+    height: 80vh;  
     /*sombra en el contorno de la imagen*/
     filter: drop-shadow(0px 5px 3px #000000);
+    animation: drop 1.5s ease;
 }
 
+/*------------------------------------------------ main background*/
 main .big--circle{
     position: absolute;
     top: 0px;
@@ -151,4 +153,58 @@ main .small--circle{
     z-index: -1;
     opacity: 0.7;
     height: 40%;
+}
+
+/*------------------------------------------------ main arrows*/
+main .laptop--select{
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    position: absolute;
+    right: 25%;
+}
+
+/*------------------------------------------------ animations*/
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/*------------------------------------------------ media queries*/
+@media screen and (max-width: 900px){
+    header .logo__container .logo__title{
+        display: none;
+    }
+    main .main__container{
+        flex-direction: column;
+    }
+    main .main__container .main__introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+    main .main__introduction h1{
+        font-size: 2rem;
+    }
+    main .main__introduction p{
+        font-size: 1.8rem;
+    }
+    main .main__introduction .cta--btn{
+        width: 100px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+    main .laptop--select{
+        right: 50%;
+        width: 30%;
+        transform: translate(50%, 5%);
+    }
+    main .main__cover img{
+        height: 50vh;
+    }
 }
